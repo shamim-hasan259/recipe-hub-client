@@ -17,7 +17,9 @@ export const fetchePopularRecipe = async () => {
 };
 
 export const fetchFeatureRecipe = async () => {
-  return await serverFetch("/api/feature/recipe");
+  return await serverFetch("/api/feature/recipe", {
+    cache: "no-store",
+  });
 };
 
 export const fetctedRecipeDetails = async (id) => {
