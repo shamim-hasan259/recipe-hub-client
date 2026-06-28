@@ -2,7 +2,8 @@ import { fetchePopularRecipe } from "@/lib/api/recipe";
 import PopularRecipeCard from "./PopularRecipeCard";
 
 const PopularRecipe = async () => {
-  const { data: recipes = [] } = (await fetchePopularRecipe()) || {};
+  const { data: recipes } = await fetchePopularRecipe();
+  console.log(recipes);
 
   return (
     <section className="relative border-none outline-none bg-[#f3f4f6] dark:bg-gradient-to-b dark:from-[#0c1017] dark:via-[#0e141f] dark:to-[#0c1017] py-16 px-6 md:px-12 transition-colors duration-300 min-h-screen overflow-hidden">

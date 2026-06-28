@@ -1,8 +1,5 @@
-import {
-  revaliDateFetched,
-  serverFetch,
-  serverProtectedFetch,
-} from "../core/server";
+import { cache } from "react";
+import { serverFetch, serverProtectedFetch } from "../core/server";
 
 export const findRecipe = async (userId) => {
   return await serverProtectedFetch(`/api/recipes?userId=${userId}`);
@@ -13,13 +10,14 @@ export const singleRecipeFetch = async (id) => {
 };
 
 export const fetchePopularRecipe = async () => {
-  return await revaliDateFetched("/api/popular/recipe", {
-    next: { revalidath: 60 },
+  const res = await serverFetch("/api/popular/recipe", {
+    cache: "no-store",
   });
+  return await res;
 };
 
 export const fetchFeatureRecipe = async () => {
-  return await revaliDateFetched("/api/feature/recipe");
+  return await serverFetch("/api/feature/recipe");
 };
 
 export const fetctedRecipeDetails = async (id) => {

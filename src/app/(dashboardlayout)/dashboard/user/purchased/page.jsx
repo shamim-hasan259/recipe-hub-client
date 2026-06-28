@@ -5,9 +5,10 @@ import { Eye, Receipt } from "lucide-react";
 import { getUserSession } from "@/lib/session/session";
 
 const PurchasedPage = async () => {
-  const user = getUserSession();
+  const user = await getUserSession();
   // console.log(user);
   const { data: payments } = await getPayment(user?.id);
+  // console.log(payments);
 
   const formatDate = (dateString) => {
     if (!dateString) return "N/A";
@@ -66,7 +67,6 @@ const PurchasedPage = async () => {
                     </th>
                   </tr>
                 </thead>
-
                 <tbody className="divide-y divide-gray-100 dark:divide-slate-700/40">
                   {payments.map((payment) => (
                     <tr

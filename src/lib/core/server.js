@@ -50,11 +50,11 @@ export const serverFetch = async (path) => {
   return data || [];
 };
 
-export const revaliDateFetched = async (path) => {
-  const res = await fetch(`${baseUrl}${path}`);
-  const data = await res.json();
-  return data || [];
-};
+// export const revaliDateFetched = async (path) => {
+//   const res = await fetch(`${baseUrl}${path}`);
+//   const data = await res.json();
+//   return data || [];
+// };
 
 export const getAllRecipe = async (category = "", page = 1, limit = 10) => {
   try {

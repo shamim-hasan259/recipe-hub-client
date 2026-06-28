@@ -48,8 +48,7 @@ export default function RecipeTable({ recipes }) {
                   {/* Recipe Image & Name with View Link */}
                   <td className="p-4">
                     <Link
-                      href={`/recipes/${recipeId}`}
-                      target="_blank"
+                      href={`/dashboard/admin/manage-recipes/edit/${recipeId}`}
                       className="flex items-center gap-3 group"
                     >
                       <img
