@@ -1,7 +1,7 @@
 import { fetchFeatureRecipe } from "@/lib/api/recipe";
 import React from "react";
 import PopularRecipeCard from "./PopularRecipeCard";
-
+export const dynamic = "force-dynamic";
 const FeatureRecipe = async () => {
   const { data: recipes = [] } = (await fetchFeatureRecipe()) || {};
   return (
