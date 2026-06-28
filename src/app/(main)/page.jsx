@@ -3,6 +3,7 @@ import FeatureRecipe from "@/components/FeatureRecipe";
 import HeroSection from "@/components/Hero";
 import PopularRecipe from "@/components/PopularRecipe";
 import StateSection from "@/components/StateSection";
+export const dynamic = "force-dynamic";
 export default function Home() {
   return (
     <>
