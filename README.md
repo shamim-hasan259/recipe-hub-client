@@ -6,7 +6,7 @@ RecipeHub is a full-stack MERN application where food lovers can create, discove
 
 # 🌐 Live Demo
 
-- **Live Site:https://recipe-hub-client-iota.vercel.app
+- **Live Site:https://recipe-hub-client-iota.vercel.app/
 - **Client Repository:https://github.com/shamim-hasan259/recipe-hub-client.git
 - **Server Repository:https://github.com/shamim-hasan259/recipe-hub-server.git
 
